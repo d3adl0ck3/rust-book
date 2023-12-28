@@ -66,7 +66,7 @@ fn try_expensive_closure() {
     use std::time::Duration;
     let expensive_closure = |num: u32| -> u32 {
         println!("calculating slowly...");
-        std::thread::sleep(Duration::from_secs(2));
+        std::thread::sleep(Duration::from_millis(1));
         num
     }; 
     expensive_closure(23);

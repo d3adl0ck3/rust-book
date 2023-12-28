@@ -85,7 +85,7 @@ mod using_message_passing_to_transfer_data_between_threads {
 
             for val in vals {
                 tx.send(val).unwrap();
-                thread::sleep(Duration::from_secs(1));
+                thread::sleep(Duration::from_millis(1));
             }
         });
 
@@ -107,7 +107,7 @@ mod using_message_passing_to_transfer_data_between_threads {
 
             for val in vals {
                 tx1.send(val).unwrap();
-                thread::sleep(Duration::from_secs(1));
+                thread::sleep(Duration::from_millis(1));
             }
         });
 
@@ -121,7 +121,7 @@ mod using_message_passing_to_transfer_data_between_threads {
 
             for val in vals {
                 tx.send(val).unwrap();
-                thread::sleep(Duration::from_secs(1));
+                thread::sleep(Duration::from_millis(1));
             }
         });
 
