@@ -29,6 +29,8 @@ mod chapter_17;
 use crate::chapter_17::all as chapter_17_all;
 mod chapter_18;
 use crate::chapter_18::all as chapter_18_all;
+mod chapter_19;
+use crate::chapter_19::all as chapter_19_all;
 #[derive(Parser,Debug)]
 #[command(author, version, about, long_about = None)]
 struct Cli {
@@ -56,4 +58,5 @@ fn main() {
     chapter_16_all();
     chapter_17_all();
     chapter_18_all();
+    chapter_19_all();
 }
