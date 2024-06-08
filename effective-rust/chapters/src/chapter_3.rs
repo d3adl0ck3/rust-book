@@ -363,12 +363,23 @@ pub mod item_5 {
             let c = Color {
                 red: 128,
                 ..Default::default()
-            }
+            };
         }
     }
     // No example code, just see item I guess
 }
 // Understand type conversions
 pub mod item_6 {
-    
+    pub fn no_automagic_conversions() {
+        let x: u32 = 2;
+        // Won't work even though u64 is guaranteed to hold any u32
+        //let y: u64 = x;
+        let y: u64 = x.into();
+    }
+    pub mod user_defined_type_conversions {
+        // Implement only the Try[From|Into] trait if a conversion can fail
+        // Implement the From trait for conversions since Into is automatically implemented in
+        // terms of From
+        // Use Into as a trait bound rather than from since Into is available if From is
+    }
 }
